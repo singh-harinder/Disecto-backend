@@ -1,0 +1,17 @@
+version: '3'
+services:
+  disecto-backend:
+    restart: always
+    build: .
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - FRONTEND_URL=${FRONTEND_URL}
+      - COOKIE_SECRET=${COOKIE_SECRET}
+      - DATABASE_URL=${DATABASE_URL}
+      - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+      - CLOUDINARY_KEY=${CLOUDINARY_KEY}
+      - CLOUDINARY_SECRET=${CLOUDINARY_SECRET}
+    ports:
+      - 80:80
