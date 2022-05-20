@@ -14,4 +14,4 @@ services:
       - CLOUDINARY_KEY=${CLOUDINARY_KEY}
       - CLOUDINARY_SECRET=${CLOUDINARY_SECRET}
     ports:
-      - 80:80
+      - "4500:4500"
